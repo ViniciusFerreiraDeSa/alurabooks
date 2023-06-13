@@ -1,0 +1,110 @@
+.carrosselTitulo {
+    color: var(--tituloMenu);
+    background-color: var(--bgH1);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.12rem;
+    padding: 2em 0 0.5em 0;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.card { 
+    background: var(--bgH1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+}
+
+.cardDescricao {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.2em;
+}
+.descricaoTitulo ,.descricaoSubtitulo, .descricaoTexto{
+    margin: 0.5em;
+}
+.descricaoTitulo {
+    color: var(--tituloMenu);
+    font-weight: 700;
+}
+
+.descricaoSubtitulo {
+    color: var(--azulEscuro);
+    font-weight: 700;
+    font-size: 1.12rem;
+}
+
+.descricaoTexto {
+    color: var(--preto);
+    font-size: 0.8rem;
+}
+.cardBotoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+.botoesAncora{
+    background-color: var(--tituloMenu);
+    padding: 1em 2.2em;
+    color: var(--bgH1);
+    font-weight: 700;
+    text-decoration: none;
+}
+.estrelaPai{
+    display: flex;
+    justify-content: stretch;
+    margin-left: 1em;
+    
+    
+}
+
+@media screen and (min-width: 1024px){
+    .carrosselTitulo{
+        font-size: 1.6rem;
+    }
+    .swiper{
+        margin: 3em;
+        width: 60%;   
+    }
+    .card{
+        width: 40%;
+        margin: 1em auto;
+    }
+    .botoesAncora:hover{
+        background: var(--corGradiente)
+    }
+    .cardBotoes:hover > .botoesAncora{
+        -webkit-text-fill-color: var(--bgH1);
+    }
+    
+}
+
+@media screen and (min-width: 1728px){
+    .carrosselConteiner{
+        display: flex;
+        margin: 0 20vw 3em 20vw;
+        align-items: center;
+    }
+    .swiper{
+        width: 50%;
+    }
+    .descricaoTitulo {
+        font-size: 2rem;
+    }
+    .descricaoTexto{
+        font-size: 1rem;
+    }
+    .card{
+        width: 60%;
+        margin-left: 3em;
+    }
+}

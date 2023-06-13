@@ -1,0 +1,138 @@
+.cabecalhoMenu{
+ width: 48px;
+ height: 48px;
+ background-image: url(../imagens/Menu.svg);
+ background-repeat: no-repeat;
+ background-position: center;
+ display: inline-block;
+}
+.cabecalho{
+    background-color: var(--bgH1);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.caixa{
+    display: flex;
+    align-items: center;
+}
+.icon{
+    padding: 0.6em;
+}
+.listaMenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.listaTitulo , .listaItens{
+    padding: 0.7em;
+    background-color: var(--bgH1);
+    
+}
+.listaTitulo{
+    color: var(--tituloMenu);
+    font-weight: 700;
+}
+
+/* ~ Combinador de Elementos*/
+.cabecalhoBotao:checked ~ .listaMenu{
+    display: block;
+}
+.cabecalhoBotao{
+    display: none;
+}
+
+.listaLink{
+    background: var(--corGradiente);
+    -webkit-background-clip: text; /*Para Funcionalidade em outros navegadores*/
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /*Prende a bgcolor nos textos*/
+    text-transform: uppercase;
+}
+.cabecalhoTitulo{
+    display: none;
+}
+.opcoes{
+    display: none;
+}
+.caixaTexto{
+    display: none;
+}
+.cabecalhoBotao:checked ~ .caixaRotulo > .cabecalhoMenu{
+    background-image: url("../imagens/Menu\ Aberto.svg");
+}
+.cabecalhoBotao:checked ~ .caixaRotulo{
+    background-color: var(--preto);
+}
+@media screen and (min-width: 1024px){
+    .cabecalhoTitulo , .cabecalhoTituloNegrito{
+        font-family: var(--fonteTablet);
+        font-size: 1.8rem;
+    }
+    .cabecalhoTitulo{
+        font-weight: 400;
+        display: block;
+    }
+    .cabecalhoTituloNegrito{
+        font-weight: 700;
+    }
+    .opcoes{
+        display: flex;
+        align-items: center;
+    }
+    .opcoesItem{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+    .opcoesLink{
+        text-decoration: none;
+        color: var(--preto);
+    }
+    .iconTransparent{
+        display: none;
+    }
+    .cabecalhoMenu{
+        display: none;
+    }
+    .opcoesBotao:checked ~ .listaMenu{ 
+        display: block;
+        width: auto;
+    }
+    .opcoesBotao{
+        display: none;
+    }
+    .opcoesBotao:checked ~ .opcoesRotulo > .opcoesItem{
+        background-color: var(--preto);
+        color: var(--bgH1);
+    }
+    .opcoesItem{
+        padding: 1em 2em;
+    }
+    .listaItens:hover{
+        background-color: var(--preto);
+    }
+    .listaItens:hover > .listaLink{
+        -webkit-text-fill-color: var(--bgH1);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .caixaLink{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+    .cabecalho{
+        padding: 0em 2em;
+    }
+    .opcoes{
+        margin-right: auto;
+    }
+    .caixaTexto{
+        display: block;
+    }
+}
