@@ -22,4 +22,5 @@
   
   <h2 align="center">Mas você pode ver mais o conteúdo clicando no site abaixo</h2>
   
+  <p align="center"><a href="https://alurabooks-nine-beryl.vercel.app/" target="_blank">clique aqui</a></p>
 
